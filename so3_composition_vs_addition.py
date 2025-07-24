@@ -1,7 +1,6 @@
-from manim import *
-# This animation requires scipy for precise rotation calculations.
-# You can install it with: pip install scipy
+import numpy as np
 from scipy.spatial.transform import Rotation
+from manim import *
 
 class SO3CompositionVsAddition(ThreeDScene):
     """

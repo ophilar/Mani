@@ -1,8 +1,6 @@
-from manim import *
-# This animation requires scipy for precise rotation calculations.
-# You can install it with: pip install scipy
-from scipy.spatial.transform import Rotation as R
 import numpy as np
+from scipy.spatial.transform import Rotation as R
+from manim import *
 
 class SE3RelativePose(ThreeDScene):
     """

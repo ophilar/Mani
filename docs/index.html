@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLAM Manim Visualizations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>SLAM Visualizations</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#concepts">Concepts</a></li>
+                <li><a href="#animations">Animations</a></li>
+                <li><a href="#getting-started">Get Started</a></li>
+                <li><a href="https://github.com/yourusername/slam-manim-visualizations" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Visualizing SLAM & Robotics
+                    <span class="gradient-text">Mathematics</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Educational Manim animations that bring complex mathematical concepts 
+                    in Simultaneous Localization and Mapping (SLAM) to life through 
+                    beautiful, interactive visualizations.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#getting-started" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Get Started
+                    </a>
+                    <a href="#animations" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i> View Animations
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="rotating-cube">
+                    <div class="cube">
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                        <div class="face right"></div>
+                        <div class="face left"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concepts Section -->
+    <section id="concepts" class="concepts">
+        <div class="container">
+            <h2 class="section-title">Mathematical Concepts</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>SO(3) Rotations</h3>
+                    <p>Special Orthogonal group representing 3D rotations. Essential for camera orientation and robot joint movements.</p>
+                    <div class="concept-tags">
+                        <span class="tag">3D Rotations</span>
+                        <span class="tag">Orthogonal Matrices</span>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <i class="fas fa-arrows-alt"></i>
+                    </div>
+                    <h3>SE(3) Transformations</h3>
+                    <p>Special Euclidean group for rigid body motions combining rotation and translation in 3D space.</p>
+                    <div class="concept-tags">
+                        <span class="tag">Rigid Body Motion</span>
+                        <span class="tag">Twists</span>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Lie Algebras</h3>
+                    <p>Tangent spaces of Lie groups, providing linear approximations for optimization and velocity representations.</p>
+                    <div class="concept-tags">
+                        <span class="tag">Tangent Spaces</span>
+                        <span class="tag">Linear Algebra</span>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Pose Graph Optimization</h3>
+                    <p>Global optimization technique for SLAM that corrects accumulated drift through loop closures.</p>
+                    <div class="concept-tags">
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Loop Closure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animations Section -->
+    <section id="animations" class="animations">
+        <div class="container">
+            <h2 class="section-title">Animation Gallery</h2>
+            <div class="animations-grid">
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <div class="placeholder-video">
+                            <i class="fas fa-cube"></i>
+                            <span>SO(3) Rotation</span>
+                        </div>
+                    </div>
+                    <div class="animation-info">
+                        <h3>SO(3) Rotation Visualization</h3>
+                        <p>Basic 3D rotation demonstrating elements of the Special Orthogonal group.</p>
+                        <div class="animation-meta">
+                            <span class="duration"><i class="fas fa-clock"></i> 10s</span>
+                            <span class="complexity"><i class="fas fa-star"></i> Beginner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <div class="placeholder-video">
+                            <i class="fas fa-globe"></i>
+                            <span>SO(3) Manifold</span>
+                        </div>
+                    </div>
+                    <div class="animation-info">
+                        <h3>SO(3) Manifold & Lie Algebra</h3>
+                        <p>Visualization of the relationship between SO(3) manifold and its Lie algebra so(3).</p>
+                        <div class="animation-meta">
+                            <span class="duration"><i class="fas fa-clock"></i> 15s</span>
+                            <span class="complexity"><i class="fas fa-star"></i> Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <div class="placeholder-video">
+                            <i class="fas fa-plus"></i>
+                            <span>Composition vs Addition</span>
+                        </div>
+                    </div>
+                    <div class="animation-info">
+                        <h3>Group Composition vs Algebra Addition</h3>
+                        <p>Comparison of group composition in SO(3) with vector addition in so(3).</p>
+                        <div class="animation-meta">
+                            <span class="duration"><i class="fas fa-clock"></i> 20s</span>
+                            <span class="complexity"><i class="fas fa-star"></i> Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <div class="placeholder-video">
+                            <i class="fas fa-camera"></i>
+                            <span>SE(3) Motion</span>
+                        </div>
+                    </div>
+                    <div class="animation-info">
+                        <h3>SE(3) Rigid Body Motion</h3>
+                        <p>Demonstration of rigid body motion combining rotation and translation.</p>
+                        <div class="animation-meta">
+                            <span class="duration"><i class="fas fa-clock"></i> 12s</span>
+                            <span class="complexity"><i class="fas fa-star"></i> Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <div class="placeholder-video">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <span>Exponential Map</span>
+                        </div>
+                    </div>
+                    <div class="animation-info">
+                        <h3>SE(3) Exponential Map</h3>
+                        <p>Conversion from twist vectors to transformation matrices via exponential mapping.</p>
+                        <div class="animation-meta">
+                            <span class="duration"><i class="fas fa-clock"></i> 18s</span>
+                            <span class="complexity"><i class="fas fa-star"></i> Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animation-card">
+                    <div class="animation-preview">
+                        <div class="placeholder-video">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Pose Graph</span>
+                        </div>
+                    </div>
+                    <div class="animation-info">
+                        <h3>Pose Graph Optimization</h3>
+                        <p>Visualization of drift accumulation and correction through loop closures.</p>
+                        <div class="animation-meta">
+                            <span class="duration"><i class="fas fa-clock"></i> 25s</span>
+                            <span class="complexity"><i class="fas fa-star"></i> Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section id="getting-started" class="getting-started">
+        <div class="container">
+            <h2 class="section-title">Get Started</h2>
+            <div class="getting-started-content">
+                <div class="setup-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Install Dependencies</h3>
+                            <p>Use the modern uv package manager for fast dependency resolution.</p>
+                            <div class="code-block">
+                                <code>uv sync</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Run Your First Animation</h3>
+                            <p>Start with a simple SO(3) rotation visualization.</p>
+                            <div class="code-block">
+                                <code>uv run manim -pql so3_visualization.py SO3RotationVisualization</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Explore and Customize</h3>
+                            <p>Modify parameters in config.py and create your own animations.</p>
+                            <div class="code-block">
+                                <code># Customize in config.py<br>ANIMATION.default_wait_time = 1.5</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setup-cta">
+                    <h3>Ready to Dive In?</h3>
+                    <p>Clone the repository and start exploring the world of SLAM visualizations.</p>
+                    <a href="https://github.com/yourusername/slam-manim-visualizations" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SLAM Manim Visualizations</h3>
+                    <p>Educational animations for robotics and SLAM concepts.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername/slam-manim-visualizations" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://docs.manim.community/" target="_blank">
+                            <i class="fas fa-book"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://docs.manim.community/">Manim Documentation</a></li>
+                        <li><a href="http://www.cds.caltech.edu/~murray/books/MLS/pdf/mls94-complete.pdf">Robotic Manipulation</a></li>
+                        <li><a href="https://github.com/gaoxiang12/slambook">Visual SLAM Book</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>License</h4>
+                    <p>MIT License - Feel free to use and modify for educational purposes.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SLAM Manim Visualizations. Built with ❤️ for the robotics community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

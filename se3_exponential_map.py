@@ -1,6 +1,6 @@
-from manim import *
-from scipy.spatial.transform import Rotation as R
 import numpy as np
+from scipy.spatial.transform import Rotation as R
+from manim import *
 
 class SE3ExponentialMap(ThreeDScene):
     """

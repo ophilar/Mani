@@ -1,3 +1,4 @@
+import numpy as np
 from manim import (
     ThreeDScene, Text, MathTex, VGroup, Sphere, Dot3D, Cube, ThreeDAxes, Square,
     Arrow3D, ArcBetweenPoints, FadeIn, FadeOut, Create, Write, GrowArrow, Rotate,

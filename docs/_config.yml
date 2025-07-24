@@ -1,0 +1,75 @@
+# GitHub Pages configuration for SLAM Manim Visualizations
+
+# Site settings
+title: SLAM Manim Visualizations
+description: Educational Manim animations for SLAM and robotics concepts
+url: "https://yourusername.github.io"
+baseurl: "/slam-manim-visualizations"
+
+# Author information
+author:
+  name: Your Name
+  email: your.email@example.com
+  bio: Robotics and SLAM enthusiast
+  location: Your Location
+  links:
+    - label: GitHub
+      icon: fab fa-github
+      url: https://github.com/yourusername
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  animations:
+    output: true
+    permalink: /animations/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "animations"
+    values:
+      layout: "animation"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include in processing
+include:
+  - _pages
+  - _posts
+  - _animations
+
+# Theme settings (if using a theme)
+# theme: jekyll-theme-minimal
+
+# Social media
+social:
+  github: yourusername
+  twitter: yourusername
+  linkedin: yourusername
+
+# Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Comments (optional)
+# disqus:
+#   shortname: your-disqus-shortname 

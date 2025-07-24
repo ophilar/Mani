@@ -1,3 +1,4 @@
+import numpy as np
 from manim import *
 
 class SE3Visualization(ThreeDScene):
