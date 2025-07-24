@@ -25,7 +25,6 @@ jobs:
           libcairo2-dev \
           libpango1.0-dev \
           libpangocairo-1.0-0 \
-          libpangocairo-1.0-dev \
           libgdk-pixbuf2.0-dev \
           libffi-dev \
           libjpeg-dev \
@@ -38,6 +37,7 @@ jobs:
           libxcb-xfixes0-dev \
           pkg-config \
           build-essential \
+          libglib2.0-dev \
           ffmpeg
         # Verify pangocairo is available
         pkg-config --exists pangocairo || echo "pangocairo not found - will try alternative approach"
