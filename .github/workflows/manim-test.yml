@@ -1,0 +1,57 @@
+name: Manim Test (Manual)
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+permissions:
+  contents: read
+
+jobs:
+  manim-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.12"
+    
+    - name: Install system dependencies for Manim
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libcairo2-dev \
+          libpango1.0-dev \
+          libpangocairo-1.0-0 \
+          libgdk-pixbuf2.0-dev \
+          libffi-dev \
+          libjpeg-dev \
+          libgif-dev \
+          librsvg2-dev \
+          libtiff5-dev \
+          libxcb1-dev \
+          libxcb-render0-dev \
+          libxcb-shape0-dev \
+          libxcb-xfixes0-dev \
+          pkg-config \
+          build-essential \
+          ffmpeg
+    
+    - name: Install uv
+      uses: astral-sh/setup-uv@v1
+      with:
+        version: latest
+    
+    - name: Install dependencies
+      run: uv sync --extra dev
+    
+    - name: Test basic Manim import
+      run: |
+        python3 -c "import manim; print(f'Manim version: {manim.__version__}')"
+    
+    - name: Test simple visualization (low quality)
+      run: |
+        # Test a simple scene to verify Manim works
+        python3 -m manim so3_visualization.py SO3RotationVisualization -pql --format mp4 
